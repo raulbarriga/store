@@ -58,6 +58,7 @@ header .site-title {
 /*  Navigation Menu **/
 .navbar-nav {
   padding: 0.8em 0em;
+  flex-direction: row;
 }
 
 .navbar-nav .nav-link {
@@ -126,8 +127,8 @@ header .site-title {
 
 .slick-dots button {
   display: block;
-  width: 0.5rem;
-  height: 0.5rem;
+  /* width: 0.5rem;
+  height: 0.5rem; */
   padding: 0;
   border: none;
   background-color: white;
@@ -216,7 +217,7 @@ header .site-title {
   padding: 0 2rem;
 }
 
-.rating svg {
+.rating i {
   font-size: 0.7rem;
   color: lightblue;
 }
@@ -307,13 +308,16 @@ footer .social i {
   padding: 3% 1%;
 }
 
-footer .col-md-2 small {
+footer small {
   color: var(--light-gray);
   padding: 0.7em 0;
 }
 
-footer .follow-us div {
-  width: 33%;
-  height: 8rem;
-  background: lightblue;
+[class^=col-] {
+  padding-left: 0;
+  padding-right: 0;
+}
+.row {
+  margin-left: 0;
+  margin-right: 0;
 }

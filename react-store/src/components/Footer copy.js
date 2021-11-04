@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React from "react";
 //import { config } from "@fortawesome/fontawesome-svg-core";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { 
@@ -20,8 +20,7 @@ import Instagram6 from '../assets/images/896_n.jpg';
 import Payment from '../assets/images/payment.png';
 //config.autoAddCss = false;
 
-class Footer extends Component {
-  render() {
+const Footer = () => {
     return (
       <footer>
         <div className="container-fluid px-5">
@@ -158,7 +157,6 @@ class Footer extends Component {
         </div>
       </footer>
     );
-  }
 }
 
 export default Footer;

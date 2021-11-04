@@ -1,17 +1,15 @@
-import React, { Component } from "react";
+import React from "react";
 //import { config } from "@fortawesome/fontawesome-svg-core";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faSearch, faShoppingBasket } from "@fortawesome/free-solid-svg-icons";
+// import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+// import { faSearch, faShoppingBasket } from "@fortawesome/free-solid-svg-icons";
 
 //config.autoAddCss = false;
-class Header extends Component {
+const Header = () => {
 
   // componentDidUpdate = () => {
   //   config.autoAddCss = false;
 
   // }
-  
-  render() {
     
     return (
       <header>
@@ -28,7 +26,7 @@ class Header extends Component {
                   USD
                 </button>
                 <div className="dropdown-menu">
-                  <a href="#" className="dropdown-item">
+                  <a href="!#" className="dropdown-item">
                     ERU - Euro
                   </a>
                 </div>
@@ -39,10 +37,10 @@ class Header extends Component {
             </div>
             <div className="col-md-4 col-12 text-right">
               <p className="my-md-4 header-links">
-                <a href="#" className="px-2">
+                <a href="!#" className="px-2">
                   Sign In
                 </a>
-                <a href="#" className="px-1">
+                <a href="!#" className="px-1">
                   Create an Account
                 </a>
               </p>
@@ -65,27 +63,27 @@ class Header extends Component {
             <div className="collapse navbar-collapse" id="navbarNav">
               <ul className="navbar-nav">
                 <li className="nav-item active">
-                  <a className="nav-link" href="#">
+                  <a className="nav-link" href="!#">
                     HOME <span className="sr-only">(current)</span>
                   </a>
                 </li>
                 <li className="nav-item">
-                  <a className="nav-link" href="#">
+                  <a className="nav-link" href="!#">
                     FEATURES
                   </a>
                 </li>
                 <li className="nav-item">
-                  <a className="nav-link" href="#">
+                  <a className="nav-link" href="!#">
                     COLLECTION
                   </a>
                 </li>
                 <li className="nav-item">
-                  <a className="nav-link" href="#">
+                  <a className="nav-link" href="!#">
                     SHOP
                   </a>
                 </li>
                 <li className="nav-item">
-                  <a className="nav-link" href="#">
+                  <a className="nav-link" href="!#">
                     ABOUT US
                   </a>
                 </li>
@@ -94,17 +92,16 @@ class Header extends Component {
 
             <div className="navbar-nav">
               <li className="nav-item rounded-circle mx-2 search-icon">
-                <FontAwesomeIcon className="fas p-2 header-icons" icon={faSearch} />
+                <i className="fas fa-search p-2"></i>
               </li>
               <li className="nav-item rounded-circle mx-2 basket-icon">
-                <FontAwesomeIcon className="fas p-2 header-icons" icon={faShoppingBasket} />
+                <i className="fas fa-shopping-basket p-2"></i>
               </li>
             </div>
           </nav>
         </div>
       </header>
     );
-  }
 }
 
 export default Header;

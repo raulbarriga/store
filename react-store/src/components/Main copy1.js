@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React from "react";
 import $ from "jquery";
 import "slick-carousel";
 //import { config } from "@fortawesome/fontawesome-svg-core";
@@ -15,8 +15,8 @@ import {
   faChevronRight,
 } from "@fortawesome/free-solid-svg-icons";
 import { faHeart } from "@fortawesome/free-regular-svg-icons";
-import Header from "./headerComponent";
-import Footer from "./footerComponent";
+import Header from "./Header";
+import Footer from "./Footer";
 import Banner1 from "../assets/images/item-1.jpg";
 import Banner2 from "../assets/images/item-2.jpg";
 import Banner3 from "../assets/images/item-3.jpg";
@@ -71,8 +71,8 @@ const breakpoint = [
   },
 ];
 
-class Main extends Component {
-  
+const Main = () => {
+  // FIX THIS FOR FUNCTIONAL COMPONENT
     componentDidMount = () => {
        /**  First Slider */
    $(".slider-one")
@@ -153,9 +153,6 @@ class Main extends Component {
     // $("#td_id").attr('class', 'newClass');
     //$("#td_id").attr('class', 'newClass');
 
-   
-
-  render() {  
     return (
       <>
         <Header />
@@ -984,7 +981,6 @@ class Main extends Component {
         <Footer />
       </>
     );
-  }
 }
 
 export default Main;
