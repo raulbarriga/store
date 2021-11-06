@@ -44,7 +44,7 @@ const Header = () => {
         </div>
       </div>
       <div id="hamburger-container" className="container-fluid p-0">
-        <nav className="navbar navbar-expand-md navbar-light bg-white justify-content-end">
+        <nav className="navbar navbar-expand-md navbar-light bg-white justify-content-end h-100 py-0">
           <button
             className="navbar-toggler position-absolute bg-light"
             type="button"
@@ -74,7 +74,7 @@ const Header = () => {
               ></button>
             </div>
             <div className="offcanvas-body">
-              <ul id="menu" className="navbar-nav flex-grow-1 pe-3">
+              <ul id="menu" className="navbar-nav flex-grow-1 pe-3 align-items-center">
                 <li className="nav-item active">
                   <a className="nav-link" href="!#">
                     HOME <span className="sr-only">(current)</span>
@@ -104,7 +104,7 @@ const Header = () => {
             </div>
           </div>
 
-          <div className="navbar-nav flex-row">
+          <div className="navbar-nav flex-row py-0">
             <li className="nav-item rounded-circle mx-2 search-icon">
               <i className="fas fa-search p-2"></i>
             </li>
