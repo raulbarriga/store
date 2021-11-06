@@ -29,25 +29,25 @@ const Footer = () => {
             <h4 className="text-center px-0">Contact Us</h4>
             <div className="row text-secondary text-center">
               <div className="col-12">
-                <i class="fa fa-home pr-2"></i>
+                <i class="fa fa-home pe-2"></i>
                 <small>No 40 Baria Street 133/2 New York City, NY</small>
               </div>
             </div>
             <div className="row text-secondary py-3 text-center">
               <div className="col-12">
-                <i class="fa fa-paper-plane pr-2"></i>
+                <i class="fa fa-paper-plane pe-2"></i>
                 <small>www.dailywebtuition.com</small>
               </div>
             </div>
             <div className="row text-secondary text-center">
               <div className="col-12">
-                <i class="fa fa-phone-volume pr-2"></i>
+                <i class="fa fa-phone-volume pe-2"></i>
                 <small>(800) 123456789</small>
               </div>
             </div>
             <div className="row social text-secondary text-center">
               <div className="col-12 py-3">
-                <i class="fab fa-twitter pl-0"></i>
+                <i class="fab fa-twitter ps-0"></i>
                 <i class="fab fa-facebook-f"></i>
                 <i class="fab fa-google-plus-g"></i>
                 <i class="fab fa-skype"></i>
@@ -77,8 +77,8 @@ const Footer = () => {
               <small>Our Sitemap</small>
             </div>
           </div>
-          <div className="col-12 px-2 pl-sm-5">
-            <h4 className="text-center text-sm-left">Follow Instagram</h4>
+          <div className="col-12 px-2 ps-sm-5">
+            <h4 className="text-center text-sm-start">Follow Instagram</h4>
             <div className="row d-flex justify-content-center justify-content-sm-start pb-1">
               <div
                 className="col-4"
@@ -88,7 +88,7 @@ const Footer = () => {
                   src={Instagram1}
                   alt="Instagram 1"
                   style={{ width: "128px" }}
-                  className="img-fluid pr-1 h-100"
+                  className="img-fluid pe-1 h-100"
                 />
               </div>
               <div
@@ -99,7 +99,7 @@ const Footer = () => {
                   src={Instagram2}
                   alt="Instagram 2"
                   style={{ width: "128px" }}
-                  className="img-fluid pr-1 h-100"
+                  className="img-fluid pe-1 h-100"
                 />
               </div>
               <div
@@ -123,7 +123,7 @@ const Footer = () => {
                   src={Instagram4}
                   alt="Instagram 4"
                   style={{ width: "128px" }}
-                  className="img-fluid pr-1 h-100"
+                  className="img-fluid pe-1 h-100"
                 />
               </div>
               <div
@@ -134,7 +134,7 @@ const Footer = () => {
                   src={Instagram5}
                   alt="Instagram 5"
                   style={{ width: "128px" }}
-                  className="img-fluid pr-1 h-100"
+                  className="img-fluid pe-1 h-100"
                 />
               </div>
               <div
@@ -155,7 +155,7 @@ const Footer = () => {
 
       <div className="container-fluid news pt-5">
         <div className="row">
-          <div className="col-md-6 col-12 pl-5">
+          <div className="col-md-6 col-12 ps-5">
             <h4 className="primary-color font-roboto m-0 p-0">
               Need Help? Call Our Award-Warning
             </h4>
@@ -163,14 +163,14 @@ const Footer = () => {
               Support Team 24/7 <br /> At (844) 5555-8324
             </p>
           </div>
-          <div className="col-md-4 col-12 my-md-0 my-3 pl-md-0 pl-5">
+          <div className="col-md-4 col-12 my-md-0 my-3 ps-md-0 ps-5">
             <input
               type="text"
               className="form-control border-0 bg-light"
               placeholder="Enter Your Email Address"
             />
           </div>
-          <div className="col-md-2 col-12 my-md-0 my-3 pl-md-0 pl-5">
+          <div className="col-md-2 col-12 my-md-0 my-3 ps-md-0 ps-5">
             <button className="btn bg-primary-color text-white">
               Subscribe
             </button>

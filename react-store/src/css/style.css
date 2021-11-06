@@ -56,9 +56,21 @@ header .site-title {
 }
 
 /*  Navigation Menu **/
+#hamburger-container nav {
+  position: inherit !important;
+}
+#hamburger-container nav button {
+top: 10px !important;
+right: 10px !important;
+}
 .navbar-nav {
   padding: 0.8em 0em;
-  flex-direction: row;
+}
+
+@media (max-width: 767.98px) { 
+  #menu {
+    flex-direction: column;
+  }
 }
 
 .navbar-nav .nav-link {
@@ -74,9 +86,9 @@ header .site-title {
   padding: 0 1.3em;
 }
 
-.navbar-nav .basket-icon {
+/* .navbar-nav .basket-icon {
   margin-right: 6.5rem !important;
-}
+} */
 
 /* Slider one */
 .site-slider {
