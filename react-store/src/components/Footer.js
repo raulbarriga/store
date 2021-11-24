@@ -1,16 +1,4 @@
 import React from "react";
-//import { config } from "@fortawesome/fontawesome-svg-core";
-// import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-// import {
-//     faTwitter,
-//     faFacebookF,
-//     faInstagram,
-//     faSkype,
-//     faPinterestP,
-//     faYoutube,
-//     faLinkedinIn,
-// } from "@fortawesome/free-brands-svg-icons";
-// import { faHome, faPaperPlane, faPhoneVolume } from "@fortawesome/free-solid-svg-icons";
 import Instagram1 from "../assets/images/256_n.jpg";
 import Instagram2 from "../assets/images/792_n.jpg";
 import Instagram3 from "../assets/images/392_n.jpg";
@@ -18,7 +6,6 @@ import Instagram4 from "../assets/images/664_n.jpg";
 import Instagram5 from "../assets/images/088_n.jpg";
 import Instagram6 from "../assets/images/896_n.jpg";
 import Payment from "../assets/images/payment.png";
-//config.autoAddCss = false;
 
 const Footer = () => {
   return (
@@ -29,31 +16,31 @@ const Footer = () => {
             <h4 className="text-center px-0">Contact Us</h4>
             <div className="row text-secondary text-center">
               <div className="col-12">
-                <i class="fa fa-home pe-2"></i>
+                <i className="fa fa-home pe-2"></i>
                 <small>No 40 Baria Street 133/2 New York City, NY</small>
               </div>
             </div>
             <div className="row text-secondary py-3 text-center">
               <div className="col-12">
-                <i class="fa fa-paper-plane pe-2"></i>
+                <i className="fa fa-paper-plane pe-2"></i>
                 <small>www.dailywebtuition.com</small>
               </div>
             </div>
             <div className="row text-secondary text-center">
               <div className="col-12">
-                <i class="fa fa-phone-volume pe-2"></i>
+                <i className="fa fa-phone-volume pe-2"></i>
                 <small>(800) 123456789</small>
               </div>
             </div>
             <div className="row social text-secondary text-center">
               <div className="col-12 py-3">
-                <i class="fab fa-twitter ps-0"></i>
-                <i class="fab fa-facebook-f"></i>
-                <i class="fab fa-google-plus-g"></i>
-                <i class="fab fa-skype"></i>
-                <i class="fab fa-pinterest-p"></i>
-                <i class="fab fa-youtube"></i>
-                <i class="fab fa-linkedin-in"></i>
+                <i className="fab fa-twitter ps-0"></i>
+                <i className="fab fa-facebook-f"></i>
+                <i className="fab fa-google-plus-g"></i>
+                <i className="fab fa-skype"></i>
+                <i className="fab fa-pinterest-p"></i>
+                <i className="fab fa-youtube"></i>
+                <i className="fab fa-linkedin-in"></i>
               </div>
             </div>
           </div>
