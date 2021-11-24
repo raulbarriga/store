@@ -8,7 +8,7 @@ import Image1 from "../assets/images/15_3.jpg";
 import Image5 from "../assets/images/11_18.jpg";
 import Carousel from "./Carousel/Carousel";
 
-const Products = ({viewportWidth}) => {
+const Products = ({ viewportWidth }) => {
   const [itemsToShow, setItemsToShow] = useState(1);
 
   const items = [
@@ -38,45 +38,57 @@ const Products = ({viewportWidth}) => {
     },
   ];
 
-    useEffect(() => {
-      if (`${viewportWidth}` >= 992) {
-        setItemsToShow(4);
-      } else if (`${viewportWidth}` >= 768) {
-        setItemsToShow(3);
-      } else if (`${viewportWidth}` >= 576) {
-        setItemsToShow(2);
-      } else {
-        setItemsToShow(1);
-      }
-    }, [viewportWidth]);
-    
+  useEffect(() => {
+    if (`${viewportWidth}` >= 992) {
+      setItemsToShow(4);
+    } else if (`${viewportWidth}` >= 768) {
+      setItemsToShow(3);
+    } else if (`${viewportWidth}` >= 576) {
+      setItemsToShow(2);
+    } else {
+      setItemsToShow(1);
+    }
+  }, [viewportWidth]);
+
   return (
     <div id="product-slider-4" className="container-fluid px-0">
       <div className="site-slider-four px-md-4">
         <div className="slider-four row text-center">
-          {/* <div className="col-md-2 product pt-md-5">
-            <img src={Sofa} className="border img-fluid" alt="Sofa" />
-          </div>
-          <div className="col-md-2 product pt-md-5">
-            <img src={Chair1} className="border img-fluid" alt="Chair 1" />
-          </div>
-          <div className="col-md-2 product pt-md-5">
-            <img src={Chair2} className="border img-fluid" alt="Chair 2" />
-          </div>
-          <div className="col-md-2 product pt-md-5">
-            <img src={Clock} className="border img-fluid" alt="Clock" />
-          </div>
-          <div className="col-md-2 product pt-md-5">
-            <img src={Image5} className="border img-fluid" alt="Product 5" />
-          </div>
-          <div className="col-md-2 product pt-md-5">
-            <img src={Image1} className="border img-fluid" alt="Product 1" />
-          </div> */}
-          <Carousel show={itemsToShow} infiniteLoop={true}>
+          <Carousel
+            show={itemsToShow}
+            infiniteLoop
+            renderPreviousButton={(previousItem, defaultClass) => (
+              <button
+                onClick={previousItem}
+                className={`${defaultClass} btn btn-primary`}
+                data-bs-slide="prev"
+              >
+                <span
+                  className="carousel-control-prev-icon"
+                  aria-hidden="true"
+                ></span>
+              </button>
+            )}
+            renderNextButton={(nextItem, defaultClass) => (
+              <button
+                onClick={nextItem}
+                className={`${defaultClass} btn btn-primary`}
+                data-bs-slide="next"
+              >
+                <span
+                  className="carousel-control-next-icon"
+                  aria-hidden="true"
+                ></span>
+              </button>
+            )}
+          >
             {items.map((item, index) => (
-              <div key={index} className="col-auto col-xs-1 col-sm-2 col-md-3 col-lg-4 product pt-md-5">
+              <div
+                key={index}
+                className="col-auto col-xs-1 col-sm-2 col-md-3 col-lg-4 product py-md-4"
+              >
                 <img
-                // col-md-2
+                  // col-md-2
                   src={item.img}
                   className="border img-fluid all-product-img"
                   alt={item.alt}
@@ -85,14 +97,6 @@ const Products = ({viewportWidth}) => {
             ))}
           </Carousel>
         </div>
-        {/* <div className="slider-btn">
-          <span className="prev position-top">
-            <i className="fas fa-chevron-left fa-2x text-secondary"></i>
-          </span>
-          <span className="next position-top right-0">
-            <i className="fas fa-chevron-right fa-2x text-secondary"></i>
-          </span>
-        </div> */}
       </div>
     </div>
   );

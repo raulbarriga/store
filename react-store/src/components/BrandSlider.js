@@ -36,7 +36,7 @@ const BrandSlider = ({ viewportWidth }) => {
     {
       img: Item11,
       alt: "Brand 5",
-    }
+    },
   ];
 
   const [itemsToShow, setItemsToShow] = useState(6);
@@ -61,28 +61,35 @@ const BrandSlider = ({ viewportWidth }) => {
     <div id="brands" className="container-fluid">
       <div className="slider-brand">
         <div className="slider-five px-5">
-          <Carousel className="carousel-dark" show={itemsToShow} infiniteLoop={true}>
-            {/* <div>
-              <img src={Item7} alt="Item 7" className="img-fluid" />
-            </div>
-            <div>
-              <img src={Item8} alt="Item 8" className="img-fluid" />
-            </div>
-            <div>
-              <img src={Item9} alt="Item 9" className="img-fluid" />
-            </div>
-            <div>
-              <img src={Item10} alt="Item 10" className="img-fluid" />
-            </div>
-            <div>
-              <img src={Item8} alt="Item 8" className="img-fluid" />
-            </div>
-            <div>
-              <img src={Item7} alt="Item 7" className="img-fluid" />
-            </div>
-            <div>
-              <img src={Item9} alt="Item 9" className="img-fluid" />
-            </div> */}
+          <Carousel
+            containerClassName="carousel-dark"
+            show={itemsToShow}
+            infiniteLoop
+            renderPreviousButton={(previousItem, defaultClass) => (
+              <button
+                onClick={previousItem}
+                className={`${defaultClass} btn btn-primary`}
+                data-bs-slide="prev"
+              >
+                <span
+                  className="carousel-control-prev-icon"
+                  aria-hidden="true"
+                ></span>
+              </button>
+            )}
+            renderNextButton={(nextItem, defaultClass) => (
+              <button
+                onClick={nextItem}
+                className={`${defaultClass} btn btn-primary`}
+                data-bs-slide="next"
+              >
+                <span
+                  className="carousel-control-next-icon"
+                  aria-hidden="true"
+                ></span>
+              </button>
+            )}
+          >
             {brands.map((item, index) => (
               <div key={index}>
                 <img src={item.img} alt={item.alt} className="img-fluid" />
@@ -90,14 +97,6 @@ const BrandSlider = ({ viewportWidth }) => {
             ))}
           </Carousel>
         </div>
-        {/* <div className="slider-btn">
-          <span className="prev position-top">
-            <i class="fas fa-chevron-left"></i>
-          </span>
-          <span className="next position-top right-0">
-            <i class="fas fa-chevron-right"></i> 
-          </span>
-        </div> */}
       </div>
     </div>
   );

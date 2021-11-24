@@ -12,13 +12,17 @@ const Features = ({ viewportWidth }) => {
   const [itemsToShow, setItemsToShow] = useState(1);
 
   useEffect(() => {
-    if (`${viewportWidth}` >= 1200) { // xl bootstrap breakpoint
+    if (`${viewportWidth}` >= 1200) {
+      // xl bootstrap breakpoint
       setItemsToShow(4);
-    } else if (`${viewportWidth}` >= 992) { // lg bootstrap breakpoint
+    } else if (`${viewportWidth}` >= 992) {
+      // lg bootstrap breakpoint
       setItemsToShow(3);
-    } else if (`${viewportWidth}` >= 768) { // md bootstrap breakpoint
+    } else if (`${viewportWidth}` >= 768) {
+      // md bootstrap breakpoint
       setItemsToShow(2);
-    } else if (`${viewportWidth}` >= 576) { // sm bootstrap breakpoint
+    } else if (`${viewportWidth}` >= 576) {
+      // sm bootstrap breakpoint
       setItemsToShow(1);
     }
   }, [viewportWidth]);
@@ -29,13 +33,13 @@ const Features = ({ viewportWidth }) => {
       alt: "Product 1",
       h6: "Vinyl Top Folding Table",
       review: (
-      <>
-      <i className="fas fa-star"></i>
-      <i className="fas fa-star"></i>
-      <i className="fas fa-star"></i>
-      <i className="fas fa-star"></i>
-      <i className="fas fa-star-half-alt"></i>
-      </>
+        <>
+          <i className="fas fa-star"></i>
+          <i className="fas fa-star"></i>
+          <i className="fas fa-star"></i>
+          <i className="fas fa-star"></i>
+          <i className="fas fa-star-half-alt"></i>
+        </>
       ),
       originalPrice: "$125.99",
       discountPrice: "$120",
@@ -46,12 +50,12 @@ const Features = ({ viewportWidth }) => {
       h6: "Ikea RUSCH 25x4 Wall",
       review: (
         <>
-      <i className="fas fa-star"></i>
-      <i className="fas fa-star"></i>
-      <i className="fas fa-star"></i>
-      <i className="fas fa-star"></i>
-      <i className="fas fa-star"></i>
-      </>
+          <i className="fas fa-star"></i>
+          <i className="fas fa-star"></i>
+          <i className="fas fa-star"></i>
+          <i className="fas fa-star"></i>
+          <i className="fas fa-star"></i>
+        </>
       ),
       originalPrice: "$119.99",
       discountPrice: "$103",
@@ -62,12 +66,12 @@ const Features = ({ viewportWidth }) => {
       h6: "Himalayan Salt Lamp",
       review: (
         <>
-      <i className="fas fa-star"></i>
-      <i className="fas fa-star"></i>
-      <i className="fas fa-star"></i>
-      <i className="fas fa-star"></i>
-      <i className="fas fa-star"></i>
-      </>
+          <i className="fas fa-star"></i>
+          <i className="fas fa-star"></i>
+          <i className="fas fa-star"></i>
+          <i className="fas fa-star"></i>
+          <i className="fas fa-star"></i>
+        </>
       ),
       originalPrice: "$469.99",
       discountPrice: "$449.99",
@@ -78,12 +82,12 @@ const Features = ({ viewportWidth }) => {
       h6: "Table Lamp Bedside Desk",
       review: (
         <>
-      <i className="fas fa-star"></i>
-      <i className="fas fa-star"></i>
-      <i className="fas fa-star"></i>
-      <i className="fas fa-star"></i>
-      <i className="fas fa-star-half-alt"></i>
-      </>
+          <i className="fas fa-star"></i>
+          <i className="fas fa-star"></i>
+          <i className="fas fa-star"></i>
+          <i className="fas fa-star"></i>
+          <i className="fas fa-star-half-alt"></i>
+        </>
       ),
       originalPrice: "$449.99",
       discountPrice: null,
@@ -108,12 +112,12 @@ const Features = ({ viewportWidth }) => {
       img: Image6,
       alt: "Product 6",
       h6: "Outdoor Patio Teak Side Table",
-      review: (<span>Write Your Review</span>),
+      review: <span>Write Your Review</span>,
       originalPrice: "$139.99",
       discountPrice: "$125",
     },
   ];
-  
+
   return (
     <>
       <div id="features" className="container text-center">
@@ -130,21 +134,52 @@ const Features = ({ viewportWidth }) => {
       <div className="container-fluid g-0">
         <div className="site-slider-three">
           <div className="row row-cols-auto slider-three text-center g-0">
-            <Carousel show={itemsToShow} infiniteLoop={true}>
+            <Carousel
+              show={itemsToShow}
+              infiniteLoop
+              renderPreviousButton={(previousItem, defaultClass) => (
+                <button
+                  onClick={previousItem}
+                  className={`${defaultClass} btn btn-primary`}
+                  data-bs-slide="prev"
+                >
+                  <span
+                    className="carousel-control-prev-icon"
+                    aria-hidden="true"
+                  ></span>
+                </button>
+              )}
+              renderNextButton={(nextItem, defaultClass) => (
+                <button
+                  onClick={nextItem}
+                  className={`${defaultClass} btn btn-primary`}
+                  data-bs-slide="next"
+                >
+                  <span
+                    className="carousel-control-next-icon"
+                    aria-hidden="true"
+                  ></span>
+                </button>
+              )}
+            >
               {items.map((item, index) => (
-                <div key={index} className="col-md-2 col-lg-3 col-xl-4 product pt-md-5">
-                  <img src={item.img} className="img-fluid all-product-img" alt={item.alt} />
+                <div
+                  key={index}
+                  className="col-md-2 col-lg-3 col-xl-4 product pt-md-5"
+                >
+                  <img
+                    src={item.img}
+                    className="img-fluid all-product-img"
+                    alt={item.alt}
+                  />
                   <div className="cart-details">
                     <h6 className="pro-title p-0">{item.h6}</h6>
-                    <div className="rating">
-                      {item.review}
-                    </div>
+                    <div className="rating">{item.review}</div>
                     <div className="pro-price py-2">
                       <h5>
                         <small>
                           <s className="text-secondary">{item.originalPrice}</s>
-                        </small>
-                        {" "}
+                        </small>{" "}
                         <span>{item.discountPrice}</span>
                       </h5>
                     </div>

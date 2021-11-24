@@ -1,9 +1,6 @@
 import React from "react";
 
 import Sofa from "../assets/images/1_11.jpg";
-// import Chair1 from "../assets/images/3_20.jpg";
-// import Chair2 from "../assets/images/6_19.jpg";
-// import Clock from "../assets/images/8_20.jpg";
 
 const Discount = () => {
   return (
